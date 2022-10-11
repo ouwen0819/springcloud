@@ -10,6 +10,7 @@
         <module name="cloud-providerconsul-payment8006" />
         <module name="cloud-config-center3344" />
         <module name="cloud-provider-payment8002" />
+        <module name="cloud-config-client3355" />
         <module name="cloud-eureka-server7001" />
         <module name="cloud-api-commons" />
         <module name="cloud-provider-payment8001" />
@@ -25,6 +26,7 @@
     <bytecodeTargetLevel>
       <module name="cloud-api-commons" target="11" />
       <module name="cloud-config-center3344" target="11" />
+      <module name="cloud-config-client3355" target="11" />
       <module name="cloud-consumer-fegin-order80" target="11" />
       <module name="cloud-consumer-feign-hystrix-order80" target="11" />
       <module name="cloud-consumer-order80" target="11" />
