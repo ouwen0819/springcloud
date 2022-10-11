@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="pers.jmu.springcloud.dao.PersonDao">
+
+    <resultMap id="baseResultMap" type="pers.jmu.springcloud.entities.Person">
+        <id column="class_cn" property="ClassCn" jdbcType="VARCHAR"></id>
+        <id column="class_name" property="ClassName" jdbcType="VARCHAR"></id>
+        <id column="class_ac" property="ClassAc" jdbcType="VARCHAR"></id>
+        <id column="class_pe" property="ClassPe" jdbcType="VARCHAR"></id>
+    </resultMap>
+    <select id="getPerson" parameterType="java.lang.String" resultMap="baseResultMap">
+        select *
+        from class a
+        where a.class_cn = #{classCn};
+    </select>
+</mapper>
