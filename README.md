@@ -89,3 +89,7 @@ guest
 监听的topic默认名称是springCloudBus
 
 curl -X POST http://localhost:3355/actuator/refresh/{destination}
+
+cloud stream消息驱动： 屏蔽底层mq（activemq，rabbitmq,rocketmq,kafka）消息中间件的细节差异，降低切换成本，统一消息的编程模型
+
+通过定义绑定器binder作为中间层，实现应用程序和消息中间件细节之间的隔离
