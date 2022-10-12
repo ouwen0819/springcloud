@@ -17,7 +17,7 @@ public class ConfigClientController {
 
     @GetMapping("/configinfo")
     public String getConfigInfo() {
-        return "config:" + configInfo + "**************" + "server port:" + port;
+        return "config:" + configInfo + "***************" + "server port:" + port;
     }
 
 }
