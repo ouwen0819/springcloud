@@ -76,7 +76,6 @@ curl -X POST http://localhost:3355/actuator/refresh
 
 springcloud bus 支持两种消息代理：rabbitMQ 和kafka
 
-
 rabbitmq环境配置
 安装erlang   http://erlang.org/download/
 安装rabbitmq   https://www.rabbitmq.com/news.html
@@ -93,3 +92,20 @@ curl -X POST http://localhost:3355/actuator/refresh/{destination}
 cloud stream消息驱动： 屏蔽底层mq（activemq，rabbitmq,rocketmq,kafka）消息中间件的细节差异，降低切换成本，统一消息的编程模型
 
 通过定义绑定器binder作为中间层，实现应用程序和消息中间件细节之间的隔离
+
+spring cloud stream 
+1.重复消费问题：分组和持久化属性group
+不同组是可以全面消费的（重复消费）
+同一组存在竞争关系，之后一个可以消费
+
+studyExchange.anonymous.2R0HoDxBRJCd6Gbu-oRijg    组流水号不同  
+自定义分组   分为同一个组解决重复消费问题
+
+2.消息持久化问题   group属性
+
+
+spring cloud sleuth:分布式请求链路跟踪
+
+zipkin：  https://repo1.maven.org/maven2/io/zipkin/zipkin-server/
+
+http://localhost:9411/zipkin/

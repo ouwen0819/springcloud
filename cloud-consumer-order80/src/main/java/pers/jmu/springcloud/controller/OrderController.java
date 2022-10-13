@@ -88,4 +88,11 @@ public class OrderController {
         return null;
     }
 
+    @GetMapping("/consumer/payment/zipkin")
+    public String paymentZipkin() {
+
+        String template = restTemplate.getForObject("http://localhost:8001" + "/payment/zipkin/", String.class);
+        return template;
+    }
+
 }
