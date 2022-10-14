@@ -82,8 +82,8 @@ rabbitmq环境配置
 
 命令：rabbitmq-plugins enable rabbitmq_management
 http://localhost:15672/
-guest
-guest
+账号：guest
+密码：guest
 
 监听的topic默认名称是springCloudBus
 
@@ -109,3 +109,15 @@ spring cloud sleuth:分布式请求链路跟踪
 zipkin：  https://repo1.maven.org/maven2/io/zipkin/zipkin-server/
 
 http://localhost:9411/zipkin/
+
+spring cloud alibaba
+
+服务注册和配置中心nacos：
+下载：https://nacos.io/zh-cn/
+http://localhost:8848/nacos
+账号：nacos
+密码：nacos
+
+
+@EnableDiscoveryClient 这个注解要放在上面
+@SpringBootApplication
