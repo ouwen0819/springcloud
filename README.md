@@ -118,6 +118,30 @@ http://localhost:8848/nacos
 账号：nacos
 密码：nacos
 
-
 @EnableDiscoveryClient 这个注解要放在上面
 @SpringBootApplication
+
+nacos支持AP和CP的切换
+
+dataId完整格式
+${prefix} 默认是spring.application.name，也可以配置spring.cloud.nacos.config.prefix来配置
+${spring.profiles.active} 当前环境对应的profile （dev，prod等）
+${file-extension}:目前支持properties和yaml
+
+${spring.application.name}-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+nacos-config-client-prod.properties
+
+nacos分类配置
+nacos默认命名空间是public，namespace用来实现隔离的
+开发 测试 生产 三个命名空间
+
+group：可以把不同的微服务划分到同一个组里
+
+service：一个service可以包含多个Cluster（集群）
+
+instance：微服务的实例
+
+nacos集群和持久化配置
+默认自带的是嵌入式数据库derby
+采用集中式存储的方式支持集群化部署，目前只支持mysql
+
