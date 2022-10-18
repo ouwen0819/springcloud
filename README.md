@@ -145,3 +145,5 @@ nacos集群和持久化配置
 默认自带的是嵌入式数据库derby
 采用集中式存储的方式支持集群化部署，目前只支持mysql
 
+nacos client -》 nginx -》nacos server（多台，集群）-》mysql数据库存储配置
+
