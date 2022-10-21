@@ -129,3 +129,15 @@ sentinel持久化： sentinel 配置写进nacos里
 "strategy":0, 流控模式 0表示直接，1表示关联，2表示链路
 "controlBehavior":0, 流控效果 0表示快速失败，1表示warm up，2表示排队等待
 "clusterMode":false 是否集群
+
+seata 分布式事务   一ID+三组件模型
+ID：全局唯一事务ID
+
+TC (Transaction Coordinator) - 事务协调者
+维护全局和分支事务的状态，驱动全局事务提交或回滚。
+
+TM (Transaction Manager) - 事务管理器
+定义全局事务的范围：开始全局事务、提交或回滚全局事务。
+
+RM (Resource Manager) - 资源管理器
+管理分支事务处理的资源，与TC交谈以注册分支事务和报告分支事务的状态，并驱动分支事务提交或回滚。
