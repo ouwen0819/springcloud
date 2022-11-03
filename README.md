@@ -24,6 +24,8 @@ rest接口第几次请求数%服务器集群总数量=实际调用服务器位�
 
 openfegin默认等待1s，超时会报错
 
+openfegin远程调用其他微服务  用@RequestMapping()注解
+
 openfegin自带ribbon
 
 hystrix 服务降级：fallback：默认返回一个结果，类似于挡板（程序异长，网络超时，服务熔断触发服务降级，线程池打满导致服务降级） 服务熔断：break：达到最大服务访问量后，直接拒绝访问，拉闸，调用服务降级返回友好提示
