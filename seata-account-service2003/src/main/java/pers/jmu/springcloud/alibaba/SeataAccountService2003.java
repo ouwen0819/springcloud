@@ -11,7 +11,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @time 14:53
  * @date 2022-11-3-0003
  */
-@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
+@SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients
 public class SeataAccountService2003 {

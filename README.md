@@ -143,3 +143,13 @@ TM (Transaction Manager) - 事务管理器
 
 RM (Resource Manager) - 资源管理器
 管理分支事务处理的资源，与TC交谈以注册分支事务和报告分支事务的状态，并驱动分支事务提交或回滚。
+
+seata服务端是TC
+@GlobalTransactional 是TM
+近似理解多个数据库是RM
+
+分组：异地机房停电容错机制
+
+vgroupMapping.xm_tx_group=xiamen-->registry.conf的nacos的cluster="xiamen"
+
+spring.cloud.alibaba.seata.tx-service-group=xm_tx_group
