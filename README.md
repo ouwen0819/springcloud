@@ -2,10 +2,6 @@
 
 微服务框架 mzq第一个微服务自学框架
 
-@resource和@autowired的区别 @restcontroller和@controller的区别 @requestbody和@requestparam @requestmapping和@postmapping
-
-权限管理 spring-security shiro OAuth2
-
 1.eureka服务注册中心集群 互相注册 2.修改host文件 3.eureka自我保护模式 4.zookeeper没看 5.consul agent -dev
 
 eureka java AP  
